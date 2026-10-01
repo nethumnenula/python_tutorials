@@ -26,9 +26,28 @@ def print_address(**kwargs):
         print(f"{key}: {value}")
 
 print_address(street="nnn",city="meegoda", state="dampe", zip="10504")
+print()
 
 
 
 
 # args & kwargs
+def shipping_label(*args, **kwargs):
+    for arg in args:
+        print(arg, end=" ")
+    print()
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
 
+    if "apt" in kwargs:
+        print(f"{kwargs.get('street')}")
+    elif "pobox" in kwargs:
+        print(f"{kwargs.get('pobox')}")
+
+shipping_label("Mr.", "Nethum", "Nenula",
+               street = "123 Fake St.",
+               #apt = "100",
+               pobox = "PO box #101",
+               city = "Detroit",
+               state = "MI",
+               zip="10504")
