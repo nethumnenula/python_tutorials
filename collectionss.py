@@ -43,4 +43,4 @@ print(len(fruits_tuple))
 print(fruits_tuple.index("apple"))
 print(fruits_tuple.count("apple"))
 for fruit in fruits_tuple:
-    print(fruit)
+    print(fruit, end=" ")
